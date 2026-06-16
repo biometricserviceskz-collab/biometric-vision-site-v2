@@ -894,7 +894,7 @@ p { margin: 0 0 1rem; }
   bottom: calc(100% + 10px);
   transform: translateX(-50%);
   min-width: 220px;
-  max-width: 280px;
+  max-width: 340px;
   padding: 10px 12px;
   border-radius: 8px;
   background: #991b1b;
@@ -902,7 +902,8 @@ p { margin: 0 0 1rem; }
   font-size: 0.8125rem;
   font-weight: 500;
   line-height: 1.4;
-  text-align: center;
+  text-align: left;
+  white-space: normal;
   box-shadow: 0 8px 24px rgba(153, 27, 27, 0.35);
   opacity: 0;
   visibility: hidden;
@@ -940,6 +941,77 @@ p { margin: 0 0 1rem; }
 .section--dark .review-mark::after,
 .section--dark .review-mark::before {
   z-index: 200;
+}
+
+.review-mark-block {
+  position: relative;
+  cursor: help;
+  outline: 2px dashed rgba(239, 68, 68, 0.55);
+  outline-offset: 6px;
+}
+
+.review-mark-block::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 12px);
+  transform: translateX(-50%);
+  min-width: 220px;
+  max-width: 320px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #991b1b;
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(153, 27, 27, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.15s, visibility 0.15s;
+  z-index: 60;
+}
+
+.review-mark-block::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 6px);
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-bottom-color: #991b1b;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s, visibility 0.15s;
+  z-index: 60;
+}
+
+.review-mark-block:hover::after,
+.review-mark-block:hover::before,
+.review-mark-block:focus::after,
+.review-mark-block:focus::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pricing-card.review-mark-block:hover {
+  transform: none;
+}
+
+.pricing-card--popular.review-mark-block {
+  transform: scale(1.03);
+}
+
+.btn.review-mark {
+  text-decoration: underline;
+  text-decoration-color: #ef4444;
+  text-decoration-thickness: 2px;
+}
+
+.section--testimonials .review-mark::after {
+  z-index: 300;
 }
 
 /* Responsive */
