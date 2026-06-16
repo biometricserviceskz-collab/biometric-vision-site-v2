@@ -875,6 +875,73 @@ p { margin: 0 0 1rem; }
   margin-top: 8px;
 }
 
+/* Review marks for editorial notes */
+.review-mark {
+  position: relative;
+  display: inline;
+  cursor: help;
+  background: linear-gradient(transparent 35%, rgba(255, 77, 77, 0.38) 35%, rgba(255, 77, 77, 0.38) 88%, transparent 88%);
+  text-decoration: underline;
+  text-decoration-color: #ef4444;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+.review-mark::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 10px);
+  transform: translateX(-50%);
+  min-width: 220px;
+  max-width: 280px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #991b1b;
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(153, 27, 27, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.15s, visibility 0.15s;
+  z-index: 50;
+}
+
+.review-mark::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 4px);
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #991b1b;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s, visibility 0.15s;
+  z-index: 50;
+}
+
+.review-mark:hover::after,
+.review-mark:hover::before,
+.review-mark:focus::after,
+.review-mark:focus::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.highlight-stat .review-mark {
+  background: linear-gradient(transparent 40%, rgba(255, 77, 77, 0.32) 40%, rgba(255, 77, 77, 0.32) 90%, transparent 90%);
+}
+
+.section--dark .review-mark::after,
+.section--dark .review-mark::before {
+  z-index: 200;
+}
+
 /* Responsive */
 @media (max-width: 960px) {
   .hero__inner,
