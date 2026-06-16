@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biometric.Vision — E-KYC (v2)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">
+        <span class="logo__name">Biometric.Vision</span>
+        <span class="logo__tagline">#1 место в Центральной Азии по сличению лиц</span>
+      </a>
+      <nav class="nav">
+        <a href="#features">Возможности</a>
+        <a href="#scenarios">Сценарии</a>
+        <a href="#pricing">Цены</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="#register" class="btn btn--primary btn--sm">Начать бесплатно</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <h1>Он-лайн проверка личности клиента — E-KYC</h1>
+        <p class="hero__lead">Liveness, распознавание документа, сверка лица и AML-скрининг в одном API.</p>
+        <p>Регистрируйте клиентов удалённо, отсекайте фрод и проходите требования регуляторов — без офисов и ручной проверки.</p>
+        <p class="hero__offer"><strong>500 проверок в месяц бесплатно</strong> в течение 1 года.</p>
+        <p class="hero__sub">Рабочий API-ключ сразу после регистрации. Дальше — $0.33 за проверку, без минимального объёма.</p>
+        <ul class="checklist checklist--inline">
+          <li>Без карты</li>
+          <li>Без контракта</li>
+          <li>Без звонка от менеджера</li>
+        </ul>
+        <a href="#register" class="btn btn--primary btn--lg">Начать тестировать платформу</a>
+      </div>
+      <div class="hero__visual">
+        <img src="images/image1.png" alt="433 типа документов, 40 сек. онбординг, 180+ стран, 99% точность" class="hero__stats">
+      </div>
+    </div>
+  </section>
+
+  <!-- API Features Carousel -->
+  <section class="section" id="features">
+    <div class="container">
+      <h2>Полная проверка личности — в одном API</h2>
+      <p class="section__lead">Один вызов API запускает все четыре проверки и возвращает готовое решение — пройдено или нет. Без ручной сборки из разных сервисов.</p>
+
+      <div class="carousel" data-carousel>
+        <div class="carousel__track">
+          <article class="carousel__slide is-active">
+            <div class="feature-card">
+              <h3>Liveness — проверка живости</h3>
+              <p>Отсекает ИИ-фрод до того, как он станет выданным кредитом или фейковым аккаунтом. Пассивный режим проверки не требует движений головой: пользователю достаточно сделать одно быстрое селфи, что сохраняет максимальную конверсию в регистрацию.</p>
+            </div>
+          </article>
+          <article class="carousel__slide">
+            <div class="feature-card">
+              <h3>OCR — распознавание документа</h3>
+              <p>Автоматически считывает и проверяет подлинность документа: 433 типа из коробки — удостоверения, водительские права, биопаспорта. Данные извлекаются сами, без ручного ввода и пересъёмки.</p>
+            </div>
+          </article>
+          <article class="carousel__slide">
+            <div class="feature-card">
+              <h3>Face Match — сверка лица</h3>
+              <p>Сравнивает селфи клиента с фото в документе и подтверждает, что документ предъявляет его настоящий владелец. Мгновенно выявляет мультиаккаунтинг. Система сверяет лицо нового пользователя с вашей базой данных и блокирует повторные регистрации мошенников, защищая ваш маркетинговый бюджет. Точность 99%.</p>
+            </div>
+          </article>
+          <article class="carousel__slide">
+            <div class="feature-card">
+              <h3>AML-скрининг</h3>
+              <p>Автоматическая проверка пользователей по международным санкционным спискам, базам PEP (политически значимых лиц) и террористов. Обеспечивает полную готовность к аудиту, защиту от чарджбэков и 100% соответствие требованиям жёстких регуляторов (включая Кюрасао, Мальту и др.) — без ручных проверок и сторонних инструментов.</p>
+            </div>
+          </article>
+        </div>
+        <div class="carousel__nav">
+          <button class="carousel__btn carousel__btn--prev" aria-label="Предыдущий">‹</button>
+          <div class="carousel__dots"></div>
+          <button class="carousel__btn carousel__btn--next" aria-label="Следующий">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industry Scenarios -->
+  <section class="section section--alt" id="scenarios">
+    <div class="container">
+      <h2>Сценарии под специфику вашей индустрии</h2>
+      <p class="section__lead">В зависимости от сферы бизнеса соедините нужные модули (Liveness, OCR, Face Match, AML) в единый бесшовный процесс.</p>
+
+      <div class="accordion">
+        <details class="accordion__item" open>
+          <summary>🏦 Банки, Финтех и МФО <span class="accordion__subtitle">Сценарий: Максимальная защита</span></summary>
+          <div class="accordion__body">
+            <p><strong>Цель:</strong> Исключить дипфейки, поддельные паспорта и полностью закрыть требования нацрегуляторов.</p>
+            <p><strong>Что входит в проверку:</strong></p>
+            <ul>
+              <li>Строгий Liveness — проверка физического присутствия по 3D-карте лица.</li>
+              <li>OCR Документов — моментальное распознавание биометрических паспортов и ID-карт.</li>
+              <li>Face Match — автоматическая сверка лица с фотографией в документе.</li>
+              <li>On-Premise контур — возможность развернуть систему на серверах банка для защиты персональных данных.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="accordion__item">
+          <summary>🎰 iGaming и Гемблинг <span class="accordion__subtitle">Сценарий: Мгновенный онбординг</span></summary>
+          <div class="accordion__body">
+            <p><strong>Цель:</strong> Защитить маркетинговый бюджет от бонусхантеров (мультиаккаунтов) и удержать игрока бесшовной регистрацией.</p>
+            <p><strong>Что входит в проверку:</strong></p>
+            <ul>
+              <li>Пассивный Liveness — незаметная проверка «живости» по одному селфи за 1 секунду без лишних движений головой.</li>
+              <li>Face Match — моментальное сравнение лица нового игрока со всей базой данных казино для блокировки повторных аккаунтов.</li>
+              <li>AML-скрининг — автоматическая проверка по санкционным спискам для лицензий Кюрасао/Мальты.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="accordion__item">
+          <summary>🚗 Шеринг, Прокат и E-commerce <span class="accordion__subtitle">Сценарий: Автономный доступ</span></summary>
+          <div class="accordion__body">
+            <p><strong>Цель:</strong> Быстро проверить права водителя или покупателя «налету» и убедиться, что за руль садится именно владелец аккаунта.</p>
+            <p><strong>Что входит в проверку:</strong></p>
+            <ul>
+              <li>OCR Документов — автоматическое считывание водительских прав из 433 поддерживаемых мировых типов.</li>
+              <li>Быстрый Liveness — бесконтактная экспресс-проверка подлинности человека перед камерой смартфона.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+
+      <div class="section__cta">
+        <a href="#register" class="btn btn--primary">Настроить сценарий для своего бизнеса</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Low bandwidth -->
+  <section class="section">
+    <div class="container two-col">
+      <div>
+        <h2>Гибкие настройки Liveness — сохраняют и безопасность, и конверсию</h2>
+        <p class="label">Факт:</p>
+        <p>Большинство систем верификации требуют тяжёлый видеопоток. Если у пользователя старый смартфон или 3G, он бросает регистрацию и вы теряете деньги. Минус 30% в конверсию.</p>
+        <p class="label">Технология Biometric.Vision:</p>
+        <p>Наши алгоритмы сжимают данные и передают их микропакетами. Мы обеспечиваем стабильное прохождение KYC на смартфонах даже со старой версией Android и iOS.</p>
+        <p class="label">Ваша выгода:</p>
+        <p class="highlight-stat">+30% к конверсии</p>
+        <p>Вы возвращаете бюджет, который раньше просто сливался на этапе проверки «живости» лица.</p>
+        <a href="#register" class="btn btn--outline">Book a demo</a>
+      </div>
+      <div class="stat-visual">
+        <div class="stat-bar">
+          <div class="stat-bar__before"><span>Другие KYC</span><strong>70%</strong></div>
+          <div class="stat-bar__after"><span>Biometric.Vision</span><strong>100%</strong></div>
+        </div>
+        <p class="stat-caption">Конверсия при слабом интернете</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard -->
+  <section class="section section--dark">
+    <div class="container">
+      <h2>Прозрачный мониторинг и управление безопасностью</h2>
+      <p class="section__lead">Наш Dashboard даёт вашей службе безопасности и комплаенс-отделу полный контроль над каждым запросом, помогая предотвращать атаки до того, как они нанесут ущерб.</p>
+      <div class="two-col">
+        <div>
+          <ul class="feature-list">
+            <li><strong>Аналитика фрода в реальном времени:</strong> Отслеживайте аномальные всплески регистраций, массовые попытки мультиаккаунтинга и атаки с использованием дипфейков на одном экране.</li>
+            <li><strong>Инструменты для бэк-офиса:</strong> Удобная ручная перепроверка (Manual Review) для пограничных случаев, выгрузка отчётов для регуляторов и управление чёрными списками (Blacklists) в один клик.</li>
+            <li><strong>On-Premise и Private Cloud контур</strong> — возможность развернуть платформу Biometric.Vision на собственных серверах (например, для банка). Персональные данные клиентов никогда не покинут периметр вашей безопасности, что на 100% соответствует требованиям национальных регуляторов.</li>
+          </ul>
+        </div>
+        <div class="dashboard-preview">
+          <img src="images/image10.png" alt="Панель управления Biometric.Vision — рабочие процессы, статистика, сессии" class="dashboard-preview__img">
+          <p class="dashboard-preview__caption">Панель управления Biometric.Vision</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MCP Integration -->
+  <section class="section section--alt" id="mcp">
+    <div class="container">
+      <h2>Простая интеграция биометрии через MCP-сервер</h2>
+      <p class="section__lead">Больше не нужно часами изучать API-документацию и вручную писать код. Наша платформа полностью оптимизирована для ИИ-ассистентов и кодинг-агентов (Cursor, Claude Code, GitHub Copilot, Devin). Делегируйте интеграцию нейросети.</p>
+
+      <div class="steps-grid">
+        <div class="step-card"><span class="step-num">1</span><h4>Зарегистрируйтесь</h4></div>
+        <div class="step-card"><span class="step-num">2</span><h4>Подключите MCP-сервер</h4><p>Предоставьте вашему ИИ-агенту прямой доступ к инструментарию Biometric.Vision через Model Context Protocol.</p></div>
+        <div class="step-card"><span class="step-num">3</span><h4>Отдайте команду текстом</h4><p>«Интегрируй Liveness-верификацию от Biometric.Vision и настрой вебхуки».</p></div>
+        <div class="step-card"><span class="step-num">4</span><h4>Получите готовый код</h4><p>ИИ-агент сам зарегистрирует песочницу, создаст сессии, пропишет миграции и выведет виджет на ваш сайт.</p></div>
+      </div>
+
+      <figure class="mcp-code">
+        <img src="images/image2.png" alt="Пример интеграции API: cURL, Python, JavaScript" loading="lazy">
+      </figure>
+
+      <p class="callout">Вместо 2-х недель работы команды программистов, интеграция биометрии в ваш бизнес теперь занимает <strong>10 минут</strong>. Вы экономите сотни часов оплачиваемой разработки.</p>
+      <p class="hero__offer"><strong>500 проверок в месяц бесплатно</strong> в течение 1 года.</p>
+      <a href="#register" class="btn btn--primary">Подключить MCP-сервер</a>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section section--testimonials" id="testimonials">
+    <div class="container">
+      <h2>Клиенты говорят о Biometric.Vision</h2>
+      <p class="section__lead">Biometric.Vision обеспечивает надёжную верификацию для ведущих финансовых институтов, iGaming-платформ и государственных сервисов.</p>
+
+      <div class="carousel carousel--testimonials" data-carousel>
+        <div class="carousel__track">
+          <article class="carousel__slide is-active">
+            <img src="images/testimonials/testimonial-1.png" alt="Отзыв: Arnur Credit — Даутов Ержан" class="testimonial-slide__img" loading="lazy">
+          </article>
+          <article class="carousel__slide">
+            <img src="images/testimonials/testimonial-2.png" alt="Отзыв: M-Lombard — Алиев Гулам" class="testimonial-slide__img" loading="lazy">
+          </article>
+          <article class="carousel__slide">
+            <img src="images/testimonials/testimonial-3.png" alt="Отзыв: Ubet — Владимир Фоломеев" class="testimonial-slide__img" loading="lazy">
+          </article>
+          <article class="carousel__slide">
+            <img src="images/testimonials/testimonial-4.png" alt="Отзыв: Vivus.kz — Павел Новиков" class="testimonial-slide__img" loading="lazy">
+          </article>
+        </div>
+        <div class="carousel__nav">
+          <button class="carousel__btn carousel__btn--prev" aria-label="Предыдущий отзыв">‹</button>
+          <div class="carousel__dots"></div>
+          <button class="carousel__btn carousel__btn--next" aria-label="Следующий отзыв">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section section--alt" id="pricing">
+    <div class="container">
+      <h2>Прозрачные цены</h2>
+      <p class="section__lead">500 проверок в месяц бесплатно в течение 1 года. Дальше — $0.33 за полную проверку, без минимального объёма и без контракта. Платите только за то, что используете.</p>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Старт</h3>
+          <div class="pricing-card__price">$0 <span>/ навсегда</span></div>
+          <p class="pricing-card__desc">Для теста и небольших объёмов</p>
+          <ul class="checklist">
+            <li>500 проверок в месяц</li>
+            <li>Полный стек: Liveness + OCR + Face Match + AML</li>
+            <li>Рабочий API-ключ сразу</li>
+            <li>Песочница</li>
+            <li>Поддержка</li>
+          </ul>
+          <a href="#register" class="btn btn--primary btn--block">Начать бесплатно</a>
+        </div>
+
+        <div class="pricing-card pricing-card--popular">
+          <div class="pricing-card__badge">Популярный</div>
+          <h3>Рост</h3>
+          <div class="pricing-card__price">$0.33 <span>/ проверка</span></div>
+          <p class="pricing-card__desc">Для растущего бизнеса</p>
+          <ul class="checklist">
+            <li>Пакет «Старт» плюс:</li>
+            <li>Без минимального объёма</li>
+            <li>Без контракта</li>
+            <li>Модули по отдельности</li>
+            <li>Поддержка 24/7</li>
+          </ul>
+          <a href="#register" class="btn btn--primary btn--block">Начать бесплатно</a>
+        </div>
+
+        <div class="pricing-card">
+          <h3>Enterprise</h3>
+          <div class="pricing-card__price">Индивидуально</div>
+          <p class="pricing-card__desc">Для банков, МФО и высоких объёмов</p>
+          <ul class="checklist">
+            <li>Пакет «Рост» плюс:</li>
+            <li>Объёмные цены (ниже за проверку)</li>
+            <li>SLA и приоритетная поддержка</li>
+            <li>Размещение данных в вашей юрисдикции</li>
+            <li>Бесплатная миграция + выделенный менеджер</li>
+          </ul>
+          <a href="#register" class="btn btn--outline btn--block">Поговорить с менеджером</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <section class="section" id="calculator">
+    <div class="container">
+      <h2>Посчитайте экономию</h2>
+      <p class="section__lead">Вы уже используете другую KYC? Посчитайте, сколько вы переплачиваете. Выберите текущего провайдера и объём проверок — увидите вашу экономию при переходе на Biometric.Vision.</p>
+
+      <div class="calculator">
+        <div class="calculator__controls">
+          <label>
+            Текущий провайдер
+            <select id="calc-provider">
+              <option value="1.20">Sumsub (~$1.20)</option>
+              <option value="1.50">Veriff (~$1.50)</option>
+              <option value="1.30">Onfido (~$1.30)</option>
+              <option value="1.00">Другой (~$1.00)</option>
+            </select>
+          </label>
+          <label>
+            Объём проверок в месяц: <strong id="calc-volume-label">1 000</strong>
+            <input type="range" id="calc-volume" min="100" max="10000" step="100" value="1000">
+          </label>
+        </div>
+        <div class="calculator__results">
+          <div class="calc-result">
+            <span class="calc-result__label" id="calc-current-label">Сейчас (Sumsub)</span>
+            <span class="calc-result__value" id="calc-current">$1 200 / мес</span>
+            <span class="calc-result__year" id="calc-current-year">$14 400 / год</span>
+          </div>
+          <div class="calc-result calc-result--highlight">
+            <span class="calc-result__label">С Biometric.Vision</span>
+            <span class="calc-result__value" id="calc-bio">$165 / мес</span>
+            <span class="calc-result__year" id="calc-bio-year">$1 980 / год</span>
+          </div>
+          <div class="calc-result calc-result--savings">
+            <span class="calc-result__label">Ваша экономия</span>
+            <span class="calc-result__value" id="calc-savings">$1 035 / мес</span>
+            <span class="calc-result__year" id="calc-savings-year">$12 420 / год</span>
+          </div>
+        </div>
+        <p class="hero__offer"><strong>500 проверок в месяц бесплатно</strong> в течение 1 года.</p>
+        <a href="#register" class="btn btn--primary">Зарегистрироваться</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support -->
+  <section class="section section--alt">
+    <div class="container two-col">
+      <div>
+        <h2>Мы рядом с вами 24/7</h2>
+        <ul class="feature-list">
+          <li><strong>Выделенная Telegram-группа:</strong> Для каждого клиента создаётся прямой канал связи с нашими инженерами техподдержки и аккаунт-менеджерами.</li>
+          <li><strong>Помощь в архитектуре:</strong> По умолчанию поддержка работает в бизнес-часы, но для Enterprise-клиентов доступна выделенная опция 24/7 по SLA.</li>
+          <li><strong>AI-ассистент разработчика:</strong> Наша умная база знаний мгновенно отвечает на технические вопросы по API прямо в процессе интеграции.</li>
+        </ul>
+      </div>
+      <figure class="team-photo">
+        <img src="images/image4.jpeg" alt="Команда Biometric.Vision" loading="lazy">
+        <figcaption>Команда Biometric.Vision</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Security -->
+  <section class="section">
+    <div class="container">
+      <h2>Ваша безопасность — наш главный приоритет</h2>
+      <p class="section__lead">Biometric.Vision соответствует строжайшим международным требованиям к защите данных и надёжности биометрических технологий.</p>
+
+      <div class="carousel carousel--certs" data-carousel>
+        <div class="carousel__track">
+          <article class="carousel__slide is-active cert-card">
+            <img src="images/image5.png" alt="Свидетельство на товарный знак Biometric.Vision" class="cert-card__img" loading="lazy">
+            <h4>Товарный знак</h4>
+            <p>Свидетельство на товарный знак Biometric.Vision, Республика Казахстан</p>
+            <button class="btn btn--ghost cert-open" data-cert="Товарный знак Biometric.Vision" data-cert-image="images/image5.png">Открыть сертификат</button>
+          </article>
+          <article class="carousel__slide cert-card">
+            <img src="images/image6.png" alt="ISO/IEC 30107-3:2023 — Biometric Presentation Attack Detection" class="cert-card__img" loading="lazy">
+            <h4>ISO/IEC 30107-3</h4>
+            <p>Biometric Presentation Attack Detection — PAD Level 2</p>
+            <button class="btn btn--ghost cert-open" data-cert="ISO/IEC 30107-3:2023" data-cert-image="images/image6.png">Открыть сертификат</button>
+          </article>
+          <article class="carousel__slide cert-card">
+            <img src="images/image7.png" alt="ISO/IEC 27001:2022 — Information Security Management" class="cert-card__img" loading="lazy">
+            <h4>ISO/IEC 27001</h4>
+            <p>Международный стандарт информационной безопасности</p>
+            <button class="btn btn--ghost cert-open" data-cert="ISO/IEC 27001:2022" data-cert-image="images/image7.png">Открыть сертификат</button>
+          </article>
+          <article class="carousel__slide cert-card">
+            <img src="images/image8.png" alt="GDPR — General Data Protection Regulation" class="cert-card__img" loading="lazy">
+            <h4>GDPR</h4>
+            <p>Соответствие европейскому регламенту защиты данных</p>
+            <button class="btn btn--ghost cert-open" data-cert="GDPR Compliance" data-cert-image="images/image8.png">Открыть сертификат</button>
+          </article>
+        </div>
+        <div class="carousel__nav">
+          <button class="carousel__btn carousel__btn--prev" aria-label="Предыдущий">‹</button>
+          <div class="carousel__dots"></div>
+          <button class="carousel__btn carousel__btn--next" aria-label="Следующий">›</button>
+        </div>
+      </div>
+
+      <figure class="compliance-badges">
+        <img src="images/image12.png" alt="NIST, ISO 30107-3, ISO 27001, GDPR" loading="lazy">
+      </figure>
+
+      <div class="section__cta">
+        <a href="#register" class="btn btn--primary">Зарегистрироваться</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--alt" id="faq">
+    <div class="container container--narrow">
+      <h2>F.A.Q.</h2>
+      <div class="accordion accordion--faq">
+        <details class="accordion__item">
+          <summary>Бесплатно — в чём подвох?</summary>
+          <div class="accordion__body"><p>Подвоха нет. 500 проверок в месяц бесплатно в течение 1 года, без карты. Дальше — $0.33 за проверку. Никаких скрытых платежей и автосписаний.</p></div>
+        </details>
+        <details class="accordion__item">
+          <summary>Нужен ли контракт или минимальный объём?</summary>
+          <div class="accordion__body"><p>Нет. Платите только за использованное. Можно начать с нуля и масштабироваться без переподписаний.</p></div>
+        </details>
+        <details class="accordion__item">
+          <summary>Сколько реально занимает интеграция?</summary>
+          <div class="accordion__body"><p>API-ключ выдаётся сразу после регистрации, песочница — тоже. Большинство команд запускается за один день. Есть SDK и примеры для cURL, Python, JavaScript.</p></div>
+        </details>
+        <details class="accordion__item">
+          <summary>Что если документ не распознался или клиент не прошёл?</summary>
+          <div class="accordion__body"><p>Поддерживается 433 типа документов. На спорных случаях доступна ручная проверка как запасной путь — клиент не теряется.</p></div>
+        </details>
+        <details class="accordion__item">
+          <summary>Где хранятся данные и насколько это безопасно?</summary>
+          <div class="accordion__body"><p>Шифрование при передаче и хранении, размещение данных в вашей юрисдикции, доступ по минимальным привилегиям. Сертификаты ISO 27001 и GDPR.</p></div>
+        </details>
+        <details class="accordion__item">
+          <summary>Можно перейти с Sumsub / Veriff / Onfido?</summary>
+          <div class="accordion__body"><p>Да. Переносим настройки, вебхуки и данные за вас, запускаем параллельно без простоя. Первые 1 000 проверок после перехода — бесплатно.</p></div>
+        </details>
+        <details class="accordion__item">
+          <summary>Соответствуете требованиям регуляторов?</summary>
+          <div class="accordion__body"><p>Да: встроенный AML-скрининг (санкции, PEP, стоп-листы) и соответствие требованиям регуляторов, включая АРРФР.</p></div>
+        </details>
+        <details class="accordion__item">
+          <summary>Возможен ли взлом вашей системы или утечка данных пользователей?</summary>
+          <div class="accordion__body"><p>Мы применяем комплекс мер наивысшего уровня: сквозное шифрование каналов связи, строгое разграничение прав доступа и постоянный аудит событий безопасности. Безопасность наших алгоритмов подтверждена международными стандартами ISO 27001, GDPR и тестами NIST. Если вы выберете On-Premise решение, данные останутся внутри вашего периметра.</p></div>
+        </details>
+        <details class="accordion__item">
+          <summary>Сколько времени реально занимает интеграция софта?</summary>
+          <div class="accordion__body"><p>С технической точки зрения, если ваша команда готова, развернуть готовый виджет или настроить API можно за 2–4 часа. В среднем, с учётом внутренних тестов, согласования юридических документов и кастомизации сценариев проверки на стороне клиента, процесс занимает от нескольких недель до месяца.</p></div>
+        </details>
+        <details class="accordion__item">
+          <summary>Можем ли мы настроить интерфейс верификации под свой бренд?</summary>
+          <div class="accordion__body"><p>Да, наши технологии полностью поддерживают концепцию White Label. Вы можете гибко настроить сценарии (flow), шрифты, цвета и элементы интерфейса так, чтобы они идеально соответствовали вашему брендбуку и гайдлайнам приложения или сайта.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Steps carousel -->
+  <section class="section">
+    <div class="container">
+      <h2>Для тех, кто управляет бизнесом без кода: настройте сценарий в личном кабинете за 5 шагов</h2>
+
+      <div class="carousel carousel--steps" data-carousel>
+        <div class="carousel__track">
+          <article class="carousel__slide is-active step-slide">
+            <span class="step-slide__num">Шаг 1</span>
+            <h3>Зарегистрируйтесь</h3>
+            <p>В админ-панели переключитесь на кнопку «Перейти в новый кабинет».</p>
+            <img src="images/image9.png" alt="Создание флоу в личном кабинете Biometric" class="step-slide__img" loading="lazy">
+          </article>
+          <article class="carousel__slide step-slide">
+            <span class="step-slide__num">Шаг 2</span>
+            <h3>Нажмите «Новый рабочий процесс»</h3>
+            <p>Создайте чистое пространство для вашего кастомного процесса.</p>
+            <img src="images/image10.png" alt="Список рабочих процессов в кабинете Biometric" class="step-slide__img" loading="lazy">
+          </article>
+          <article class="carousel__slide step-slide">
+            <span class="step-slide__num">Шаг 3</span>
+            <h3>Выберите технологии</h3>
+            <p>Выберите нужные модули под задачи вашего бизнеса (Liveness, Документы, Face Match) и создайте свой уникальный flow.</p>
+          </article>
+          <article class="carousel__slide step-slide">
+            <span class="step-slide__num">Шаг 4</span>
+            <h3>Протестируйте</h3>
+            <p>Запустите мгновенное тестирование собранных технологий прямо внутри кабинета, чтобы убедиться в точности работы.</p>
+          </article>
+          <article class="carousel__slide step-slide">
+            <span class="step-slide__num">Шаг 5</span>
+            <h3>Задайте параметры</h3>
+            <p>Настройте гибкие правила прохождения (уровни безопасности, геолокацию, лимиты) под требования вашего регулятора.</p>
+          </article>
+        </div>
+        <div class="carousel__nav">
+          <button class="carousel__btn carousel__btn--prev" aria-label="Предыдущий">‹</button>
+          <div class="carousel__dots"></div>
+          <button class="carousel__btn carousel__btn--next" aria-label="Следующий">›</button>
+        </div>
+      </div>
+
+      <p class="section__note">А если у вас возникнут вопросы, напишите в техподдержку. Мы всегда рядом.</p>
+    </div>
+  </section>
+
+  <!-- Final CTA + Form -->
+  <section class="section section--cta" id="register">
+    <div class="container container--narrow">
+      <h2>Готовы автоматизировать верификацию и поднять конверсию?</h2>
+      <p class="section__lead">Создайте аккаунт разработчика и получите доступ к песочнице API за 60 секунд.</p>
+
+      <div class="register-block">
+        <figure class="register-form__visual">
+          <img src="images/image11.png" alt="Форма регистрации — создайте аккаунт" loading="lazy">
+        </figure>
+
+        <form class="register-form" id="register-form">
+          <div class="register-form__fields">
+            <input type="email" placeholder="Корпоративная почта" required aria-label="Email">
+            <input type="text" placeholder="Компания" aria-label="Компания">
+            <button type="submit" class="btn btn--primary btn--lg">500 проверок в месяц бесплатно, в течение 1 года</button>
+          </div>
+          <p class="register-form__legal">Нажимая кнопку, вы соглашаетесь с <a href="#">Политикой конфиденциальности</a>. Мы гарантируем 100% безопасность ваших данных в соответствии с регламентом GDPR.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="logo">
+        <span class="logo__name">Biometric.Vision</span>
+      </div>
+      <nav class="footer__nav">
+        <a href="#">Документация API</a>
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Контакты</a>
+      </nav>
+      <p class="footer__copy">© 2026 Biometric.Vision. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <!-- Cert modal -->
+  <div class="modal" id="cert-modal" hidden>
+    <div class="modal__backdrop"></div>
+    <div class="modal__content">
+      <button class="modal__close" aria-label="Закрыть">×</button>
+      <h3 id="cert-modal-title">Сертификат</h3>
+      <div class="modal__pdf-placeholder">
+        <img id="cert-modal-img" src="" alt="" class="modal__cert-img">
+        <p id="cert-modal-fallback">PDF-сертификат <strong id="cert-modal-name"></strong></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
