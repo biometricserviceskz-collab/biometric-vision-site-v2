@@ -448,6 +448,17 @@ p { margin: 0 0 1rem; }
   color: var(--color-text-muted);
 }
 
+.liveness-mode__alias {
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #64748b;
+}
+
+.review-mark-block .liveness-mode {
+  outline: 1px dashed rgba(239, 68, 68, 0.35);
+}
+
 .liveness-mode strong {
   display: block;
   font-size: 1.125rem;
